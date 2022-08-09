@@ -20,9 +20,12 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { CookieService } from 'ngx-cookie-service';
 import { ToastrModule } from 'ngx-toastr';
+import { AboutDialogComponent } from './component/about-dialog-component';
 import { HeaderComponent } from './component/header.component';
+import { ConfigService } from './config.service';
 
-@NgModule({  
+@NgModule({
+  declarations: [AboutDialogComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -51,10 +54,10 @@ import { HeaderComponent } from './component/header.component';
     MatIconModule,
     MatProgressSpinnerModule,
     FormlyMaterialModule,
-    MatAutocompleteModule    
+    MatAutocompleteModule
   ],
   providers: [
-    CookieService
+    CookieService, ConfigService
   ],
   bootstrap: [HeaderComponent]
 })

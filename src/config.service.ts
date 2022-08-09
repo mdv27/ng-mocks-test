@@ -10,6 +10,7 @@ export class ConfigService {
   };
 
   async getAppConfig() {
+    await Promise.resolve();
     return this.appConfig;
   }
 }
